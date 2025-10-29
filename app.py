@@ -13,7 +13,7 @@ st.set_page_config(page_title="Strategic Accounts Ownership Explorer", layout="w
 st.title("📊 Strategic Accounts Ownership Explorer")
 st.caption("Cascading filters: Customer → SAM → State → ZIP. Dropdowns collapse automatically after selection.")
 
-DATA_PATH = r"C:\Users\sbaum\Strategic_Account_Ownership_Master.xlsx"
+DATA_PATH = "Strategic_Account_Ownership_Master.xlsx"
 SHEET_NAME = "Database"
 
 # ----------------------------
@@ -215,3 +215,4 @@ selects.forEach(sel=>{
 });
 </script>
 """, unsafe_allow_html=True)
+
