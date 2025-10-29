@@ -9,7 +9,34 @@ import uuid  # used to regenerate widget keys on reset
 # ----------------------------
 # Page setup
 # ----------------------------
-st.set_page_config(page_title="Strategic Accounts Ownership Explorer", layout="wide")
+st.set_page_config(
+    page_title="Strategic Accounts Ownership Explorer",
+    page_icon="Favicon.png",      # 👈 Uses your uploaded Wausau Supply logo
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Optional mobile optimization
+st.markdown("""
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @media (max-width: 600px) {
+            h1, h2, h3 {
+                font-size: 1.2rem !important;
+            }
+            .stPlotlyChart {
+                height: 420px !important;
+            }
+        }
+        .stMultiSelect, .stSelectbox, .stCheckbox {
+            margin-bottom: 12px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# ----------------------------
+# App Title and Description
+# ----------------------------
 st.title("📊 Strategic Accounts Ownership Explorer")
 st.caption("Cascading filters: Customer → SAM → State → ZIP. Dropdowns collapse automatically after selection.")
 
@@ -215,4 +242,5 @@ selects.forEach(sel=>{
 });
 </script>
 """, unsafe_allow_html=True)
+
 
